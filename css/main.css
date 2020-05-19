@@ -142,12 +142,14 @@ form {
     transition: ease-out .3s;
     width: 28vw;
     min-width: 300px;
+
     overflow: hidden;
     transform: scale(1.2);
 }
 .bien:hover img {
     transition: ease-in .3s;
     transform: scale(1.3);
+
 }
 
 .biens__container {
@@ -177,7 +179,7 @@ dd, dt {
 
 /* Agents */
 .agents {
-
+    
 }
 .agents a {
     color: black;
@@ -269,12 +271,20 @@ footer p {
     nav span {
         visibility: collapse;
     }
+
+    .accueil {
+        background: url("../images/fond.jpg") fixed  no-repeat  -1100px -100px;
+    }    
+
     .biens {
         flex-direction: column;
     }
     .biens img {
         width: 85vw;
-    }   
+    } 
+    .bien {
+        margin-bottom: 40px;
+    }  
     .agents__container {
         justify-content: center;
     }
