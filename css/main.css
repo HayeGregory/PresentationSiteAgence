@@ -56,7 +56,15 @@ h2 {
     color: rgb(215, 0, 65);
 }
 h3 {
+    margin: 15px 0;
     color: rgb(215, 0, 65);
+}
+h4 {
+    font-size: 1.3rem;
+}
+h5 {
+    font-size: 1.1rem;
+    margin: 10px 0;
 }
 /* Accueil */
 .accueil {
@@ -110,6 +118,14 @@ form {
 
 
 /* Biens */
+.biens a {
+    color: black;
+}
+.biens a:hover {
+    transition: ease-in-out .2s;
+    color: rgb(255, 0, 76);
+    
+}
 .fixed {
     height: 6vh;
 }
@@ -144,10 +160,12 @@ form {
     flex-direction: column;
     margin: 1vw;
 }
-.bien *:not(i) {
+
+.bien *:not(i,img) {
     padding-bottom:1vh;
 }
- dl {
+dl {
+    margin-top: 10px;
     font-size: 0.9rem;
     font-weight: bold;
     display: flex;
@@ -158,11 +176,30 @@ dd, dt {
 }
 
 /* Agents */
+.agents {
+
+}
+.agents a {
+    color: black;
+}
+.agents a:hover {
+    transition: ease-in-out .2s;
+    color: rgb(255, 0, 76);
+    
+}
+.agents i {
+    color: black;
+}
+.agents i:hover {
+    transition: ease-in-out .2s;
+    color: rgb(255, 0, 76);
+}
 .agents__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
+    flex-basis: 50%;
+    justify-content: space-around;
+    margin: 0 5%;
 }
 .agents > h2 {
     text-align: center;
@@ -172,41 +209,50 @@ dd, dt {
     display: flex;
 }
 .infosAgent {
+    /* margin: 15px 0;  */
     display: flex;
     flex-direction: column;
 }
-
-.reseauSociauxAgent img {
-    height: 40px;
+.reseauSociauxAgent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+}
+.reseauSociauxAgent > a >  i {
+    color: rgb(5,5,5);
+    font-size: 2rem;
+    margin: 15px 0;
 }
 .agent * {
-
     line-height: 25px;
 }
 .agent .boxImg img {
-    padding: 0 5px;
     width: 20vw;
     min-width: 300px;
-    overflow: hidden;
+    margin-right: 1vw ;
 }
-.agent i {
+.infosAgent i {
     font-size: 1.2rem;
     width: 25px;
     height: 25px;
 }
 /* footer */
-footer {
+footer > div {
     min-height: 250px;
     background-color: rgb(5,5,5);
     color: rgb(215, 0, 65);
     display: flex;
     flex-basis: 25%;
+    padding: 6vw;
+}
+footer > div > div {
+    margin: 1vw;
+}
+footer p {
+    margin: 15px 0;
+}
 
-}
-footer > div {
-    padding: 4vw;
-    margin:0;
-}
 
 
 @media (max-width : 640px ) {
@@ -229,20 +275,21 @@ footer > div {
     .biens img {
         width: 85vw;
     }   
-
+    .agents__container {
+        justify-content: center;
+    }
     .agent .boxImg img {
-        /* width: 80vw; */
-        min-width: 200px;
+        margin: 0;
+        width: 85vw;
     }
-    /* .agent {
+    .agent {
         flex-direction: column;
-    } */
+    }
 
-    footer {
-        flex-direction: column;
-    }
     footer > div {
-        margin:5vw;
-        padding: 0;
+        flex-direction: column;
+
     }
+
+
 }
